@@ -1,0 +1,287 @@
+.insights-page {
+    max-width: 1280px;
+    margin: 80px auto 120px auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.insights-header {
+    margin-bottom: 32px;
+}
+
+.insights-crumb {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: #7e8ba3;
+    margin: 0 0 8px 0;
+}
+
+.insights-heading {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #0b153d;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.insights-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.insight-card {
+    display: flex;
+    gap: 18px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+    align-items: stretch;
+}
+
+.insight-image {
+    flex: 0 0 230px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0b153d, #4a5568);
+}
+
+.insight-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.insight-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.insight-date {
+    margin: 0;
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #6b7280;
+}
+
+.insight-title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #0b153d;
+    line-height: 1.35;
+}
+
+.insight-description {
+    margin: 0;
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.insights-sidebar {
+    background: #0f172a;
+    color: #e5e7eb;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 12px 34px rgba(0,0,0,0.16);
+}
+
+.sidebar-heading {
+    margin: 0 0 14px 0;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar-card {
+    background: rgba(255,255,255,0.04);
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+.sidebar-source {
+    margin: 0 0 2px 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #cbd5e1;
+}
+
+.sidebar-date {
+    margin: 0 0 6px 0;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.sidebar-title {
+    display: inline-block;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #f8fafc;
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+.sidebar-title:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    .insights-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .insights-sidebar {
+        order: 2;
+    }
+
+    .insights-page {
+        padding: 0 20px;
+    }
+
+    .insights-heading {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .insights-page {
+        margin: 48px auto 80px auto;
+        padding: 0 16px;
+    }
+
+    .insights-header {
+        margin-bottom: 24px;
+    }
+
+    .insights-heading {
+        font-size: 1.8rem;
+    }
+
+    .insights-grid {
+        gap: 24px;
+    }
+
+    .insight-card {
+        flex-direction: column;
+        gap: 14px;
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    .insight-image {
+        width: 100%;
+        flex: 0 0 auto;
+        aspect-ratio: 4/3;
+        border-radius: 10px;
+    }
+
+    .insight-title {
+        font-size: 1.1rem;
+    }
+
+    .insight-description {
+        font-size: 0.95rem;
+    }
+
+    .insights-sidebar {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .sidebar-heading {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+
+    .sidebar-list {
+        gap: 10px;
+    }
+
+    .sidebar-card {
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .sidebar-title {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .insights-page {
+        margin: 40px auto 60px auto;
+        padding: 0 12px;
+    }
+
+    .insights-heading {
+        font-size: 1.5rem;
+        letter-spacing: -0.005em;
+    }
+
+    .insights-crumb {
+        font-size: 0.75rem;
+        margin-bottom: 6px;
+    }
+
+    .insight-card {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .insight-title {
+        font-size: 1rem;
+    }
+
+    .insight-date {
+        font-size: 0.85rem;
+    }
+
+    .insight-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .sidebar-heading {
+        font-size: 0.95rem;
+    }
+
+    .sidebar-card {
+        padding: 8px;
+    }
+
+    .sidebar-source {
+        font-size: 0.85rem;
+    }
+
+    .sidebar-date {
+        font-size: 0.8rem;
+    }
+
+    .sidebar-title {
+        font-size: 0.9rem;
+    }
+}
