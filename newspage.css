@@ -1,3 +1,4 @@
+/* Insights Page Layout */
 .insights-page {
     max-width: 1280px;
     margin: 80px auto 120px auto;
@@ -6,7 +7,7 @@
 }
 
 .insights-header {
-    margin-bottom: 32px;
+    margin-bottom: 48px;
 }
 
 .insights-crumb {
@@ -26,135 +27,183 @@
     letter-spacing: -0.01em;
 }
 
+/* Two-Column Grid */
 .insights-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 32px;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 48px;
     align-items: start;
 }
 
+/* Column Headings */
+.column-heading {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #0b153d;
+    margin: 0 0 28px 0;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    position: relative;
+}
+
+.column-heading::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 3px;
+    background: #0b153d;
+    border-radius: 2px;
+    margin-top: 10px;
+}
+
+/* Left Column: Latest Insights */
 .insights-main {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    max-width: 85%;
 }
 
-.insight-card {
-    display: flex;
-    gap: 18px;
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 16px;
-    box-shadow: 0 14px 40px rgba(0,0,0,0.08);
-    align-items: stretch;
+.featured-insight {
+    margin-bottom: 28px;
 }
 
-.insight-image {
-    flex: 0 0 230px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: linear-gradient(135deg, #0b153d, #4a5568);
+.featured-insight:last-child {
+    margin-bottom: 0;
 }
 
-.insight-image img {
+.featured-image {
     width: 100%;
-    height: 100%;
+    max-width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 14px;
+    background: linear-gradient(135deg, #0b153d, #4a5568);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.featured-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2/1;
     object-fit: cover;
     display: block;
 }
 
-.insight-body {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
+.featured-content {
+    padding: 0 2px;
 }
 
-.insight-date {
-    margin: 0;
-    font-size: 0.92rem;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    color: #6b7280;
-}
-
-.insight-title {
-    margin: 0;
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: #0b153d;
-    line-height: 1.35;
-}
-
-.insight-description {
-    margin: 0;
-    color: #374151;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-.insights-sidebar {
-    background: #0f172a;
-    color: #e5e7eb;
-    border-radius: 16px;
-    padding: 16px;
-    box-shadow: 0 12px 34px rgba(0,0,0,0.16);
-}
-
-.sidebar-heading {
-    margin: 0 0 14px 0;
-    font-size: 1.1rem;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
-
-.sidebar-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.sidebar-card {
-    background: rgba(255,255,255,0.04);
-    border-radius: 10px;
-    padding: 12px;
-    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
-}
-
-.sidebar-source {
-    margin: 0 0 2px 0;
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: #cbd5e1;
-}
-
-.sidebar-date {
-    margin: 0 0 6px 0;
-    font-size: 0.85rem;
-    color: #94a3b8;
-}
-
-.sidebar-title {
-    display: inline-block;
-    font-size: 0.98rem;
-    font-weight: 700;
-    color: #f8fafc;
+.featured-link {
     text-decoration: none;
-    line-height: 1.4;
+    display: block;
+    transition: opacity 0.2s ease;
 }
 
-.sidebar-title:hover {
+.featured-link:hover {
+    opacity: 0.85;
+}
+
+.featured-link:hover .featured-title {
     text-decoration: underline;
 }
 
+.featured-date {
+    margin: 0 0 8px 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #6b7280;
+    text-transform: uppercase;
+}
+
+.featured-title {
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0b153d;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+}
+
+.featured-description {
+    margin: 0;
+    color: #374151;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Right Column: In the News */
+.insights-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.insights-sidebar .column-heading {
+    color: #0b153d;
+    margin-bottom: 24px;
+}
+
+.news-container {
+    background: #0f172a;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+}
+
+.news-card {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.news-card:first-child {
+    padding-top: 0;
+}
+
+.news-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.news-source {
+    margin: 0 0 6px 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.news-date {
+    margin: 0 0 10px 0;
+    font-size: 0.88rem;
+    color: #64748b;
+}
+
+.news-title {
+    display: inline-block;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #f8fafc;
+    text-decoration: none;
+    line-height: 1.5;
+    transition: color 0.2s ease;
+}
+
+.news-title:hover {
+    color: #cbd5e1;
+    text-decoration: underline;
+}
+
+/* Tablet Styles */
 @media (max-width: 1024px) {
     .insights-grid {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 56px;
     }
 
     .insights-sidebar {
+        position: static;
         order: 2;
     }
 
@@ -165,8 +214,22 @@
     .insights-heading {
         font-size: 2.2rem;
     }
+
+    .column-heading {
+        font-size: 1.2rem;
+        margin-bottom: 28px;
+    }
+
+    .featured-title {
+        font-size: 1.6rem;
+    }
+
+    .news-container {
+        padding: 24px;
+    }
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
     .insights-page {
         margin: 48px auto 80px auto;
@@ -174,60 +237,56 @@
     }
 
     .insights-header {
-        margin-bottom: 24px;
+        margin-bottom: 36px;
     }
 
     .insights-heading {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
 
     .insights-grid {
-        gap: 24px;
+        gap: 48px;
     }
 
-    .insight-card {
-        flex-direction: column;
-        gap: 14px;
-        padding: 14px;
-        border-radius: 12px;
+    .column-heading {
+        font-size: 1.1rem;
+        margin-bottom: 24px;
     }
 
-    .insight-image {
-        width: 100%;
-        flex: 0 0 auto;
-        aspect-ratio: 4/3;
+    .featured-insight {
+        margin-bottom: 40px;
+    }
+
+    .featured-image {
+        margin-bottom: 20px;
         border-radius: 10px;
     }
 
-    .insight-title {
-        font-size: 1.1rem;
+    .featured-title {
+        font-size: 1.4rem;
+        margin-bottom: 14px;
     }
 
-    .insight-description {
-        font-size: 0.95rem;
+    .featured-date {
+        font-size: 0.88rem;
+        margin-bottom: 10px;
     }
 
-    .insights-sidebar {
-        padding: 14px;
-        border-radius: 14px;
-    }
-
-    .sidebar-heading {
+    .featured-description {
         font-size: 1rem;
-        margin-bottom: 12px;
     }
 
-    .sidebar-list {
-        gap: 10px;
+    .news-container {
+        padding: 20px;
+        border-radius: 16px;
     }
 
-    .sidebar-card {
-        padding: 10px;
-        border-radius: 8px;
+    .news-card {
+        padding: 16px 0;
     }
 
-    .sidebar-title {
-        font-size: 0.95rem;
+    .news-title {
+        font-size: 1rem;
     }
 }
 
@@ -238,7 +297,7 @@
     }
 
     .insights-heading {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         letter-spacing: -0.005em;
     }
 
@@ -247,41 +306,57 @@
         margin-bottom: 6px;
     }
 
-    .insight-card {
-        gap: 12px;
-        padding: 12px;
+    .insights-header {
+        margin-bottom: 32px;
     }
 
-    .insight-title {
+    .column-heading {
         font-size: 1rem;
+        margin-bottom: 20px;
     }
 
-    .insight-date {
+    .featured-insight {
+        margin-bottom: 32px;
+    }
+
+    .featured-image {
+        margin-bottom: 16px;
+    }
+
+    .featured-title {
+        font-size: 1.25rem;
+        line-height: 1.35;
+    }
+
+    .featured-date {
         font-size: 0.85rem;
     }
 
-    .insight-description {
-        font-size: 0.9rem;
-        line-height: 1.5;
-    }
-
-    .sidebar-heading {
+    .featured-description {
         font-size: 0.95rem;
+        line-height: 1.65;
     }
 
-    .sidebar-card {
-        padding: 8px;
+    .news-container {
+        padding: 18px;
     }
 
-    .sidebar-source {
+    .news-card {
+        padding: 14px 0;
+    }
+
+    .news-source {
         font-size: 0.85rem;
+        margin-bottom: 4px;
     }
 
-    .sidebar-date {
-        font-size: 0.8rem;
+    .news-date {
+        font-size: 0.82rem;
+        margin-bottom: 8px;
     }
 
-    .sidebar-title {
-        font-size: 0.9rem;
+    .news-title {
+        font-size: 0.95rem;
+        line-height: 1.45;
     }
 }
