@@ -1,3 +1,156 @@
+/* Footer overrides for newspage */
+.footer {
+    background: linear-gradient(120deg, #0b153d 80%, #1a223f 100%);
+    padding: 56px 0 28px 0;
+    color: #e6e8ee;
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 32px;
+}
+
+.footer-section {
+    flex: 1 1 220px;
+    min-width: 180px;
+    max-width: 260px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+}
+
+.footer-section h4 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    color: #f6c98f;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.footer-section ul li a {
+    color: #f0f0f0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    border-radius: 6px;
+    padding: 2px 6px;
+    transition: background 0.2s, color 0.2s;
+    text-transform: uppercase;
+}
+
+.footer-section ul li a:hover {
+    background: none;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-section address {
+    font-style: normal;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #f0f0f0;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.footer-section p {
+    color: #f0f0f0;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.footer-email-form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 18px;
+    margin-top: 32px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
+}
+
+.footer-social {
+    margin-top: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.footer-social a {
+    color: #f6c98f;
+    font-size: 1.2rem;
+    transition: color 0.3s, background 0.3s;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+    padding: 7px 10px 6px 10px;
+    display: inline-block;
+}
+
+.footer-social a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    .footer-section {
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-bottom {
+        padding: 12px 0 0 0;
+        margin-top: 18px;
+    }
+}
 /* Insights Page Layout */
 .insights-page {
     max-width: 1280px;
@@ -37,24 +190,12 @@
 
 /* Column Headings */
 .column-heading {
-    font-size: 1.6rem;
-    font-weight: 900;
+    font-size: 1.15rem;
+    font-weight: 800;
     color: #0b153d;
-    margin: 0 0 28px 0;
-    letter-spacing: 0.06em;
+    margin: 0 0 24px 0;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-    line-height: 1.2;
-    position: relative;
-}
-
-.column-heading::after {
-    content: "";
-    display: block;
-    width: 56px;
-    height: 3px;
-    background: #0b153d;
-    border-radius: 2px;
-    margin-top: 10px;
 }
 
 /* Left Column: Latest Insights */
