@@ -1,10 +1,16 @@
-// Header Hide/Show on Scroll
+// Header Hide/Show on Scroll (disabled on mobile)
 const header = document.getElementById('header');
 let lastScrollY = 0;
 let scrollDirection = 'down';
 let scrollTimeout;
 
+// Check if device is mobile
+const isMobile = () => window.innerWidth <= 768;
+
 window.addEventListener('scroll', () => {
+    // Skip scroll behavior on mobile
+    if (isMobile()) return;
+    
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > lastScrollY) {

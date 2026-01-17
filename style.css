@@ -544,6 +544,17 @@ header.header-hidden {
     transform: translateY(-100%);
 }
 
+/* Mobile: Keep header static, disable scroll-based hiding */
+@media (max-width: 768px) {
+    header {
+        position: sticky;
+    }
+    
+    header.header-hidden {
+        transform: translateY(0) !important;
+    }
+}
+
 .top-bar {
     background-color: #cc7514;
     padding: 10px 20px;
